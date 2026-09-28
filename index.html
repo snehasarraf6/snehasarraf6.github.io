@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sneha Sarraf — Software Engineer & ML Enthusiast</title>
+  <meta name="description" content="Portfolio of Sneha Sarraf — B.Tech Computer Science Engineering student at SRM Institute of Science and Technology, former Software Development Intern at HumaxMindz Enricherz, and Machine Learning Researcher specializing in agricultural computer vision and deep learning." />
+  <meta name="author" content="Sneha Sarraf" />
+
+  <!-- Google Fonts: Outfit & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-brand">
+      <span class="brand-icon">⬡</span>
+      <span class="brand-text">Sneha Sarraf</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#journey" class="nav-link">Journey</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#expertise" class="nav-link">Skills</a></li>
+      <li><a href="#achievements" class="nav-link">Certifications</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <a href="assets/sneha_sarraf_resume.pdf" target="_blank" download="Sneha_Sarraf_Resume.pdf" class="nav-cta">
+        <i class="fa-solid fa-file-pdf"></i> Resume
+      </a>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#journey" class="mobile-link">Journey</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#expertise" class="mobile-link">Skills</a>
+    <a href="#achievements" class="mobile-link">Certifications</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="assets/sneha_sarraf_resume.pdf" target="_blank" download="Sneha_Sarraf_Resume.pdf" class="mobile-link" style="color: var(--c-cyan);">Download Resume (PDF)</a>
+  </div>
+
+  <!-- 1. HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="assets/hero_bg.png" alt="Hero Background" class="hero-bg-img" />
+      <div class="hero-overlay"></div>
+      <canvas id="particles-canvas"></canvas>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Available · B.Tech CSE @ SRM Institute of Science and Technology</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line title-small">Sneha</span>
+        <span class="title-line title-large">Sarraf</span>
+      </h1>
+      <p class="hero-tagline">Aspiring Software Engineer · ML Enthusiast · Data Analytics</p>
+      <p class="hero-subtitle">
+        I'm a <span id="typing-text" class="typing-text"></span><span class="typing-cursor">|</span>
+      </p>
+
+      <!-- Stats Strip -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" data-target="95">0</span>
+          <span class="stat-label">% Model Accuracy</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="130">0</span>
+          <span class="stat-label">+ Volunteering Hours</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="3">0</span>
+          <span class="stat-label">Industry Certifications</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="81.75" data-float="true">0</span>
+          <span class="stat-label">% High School Distinction</span>
+        </div>
+      </div>
+
+      <div class="hero-cta-group">
+        <a href="#projects" class="btn-primary" id="hero-projects-btn">
+          <i class="fa-solid fa-code"></i> Explore Projects
+        </a>
+        <a href="assets/sneha_sarraf_resume.pdf" target="_blank" download="Sneha_Sarraf_Resume.pdf" class="btn-ghost btn-resume" id="hero-resume-btn">
+          <i class="fa-solid fa-download"></i> Download Resume
+        </a>
+        <a href="#contact" class="btn-ghost" id="hero-contact-btn">
+          <i class="fa-solid fa-paper-plane"></i> Get In Touch
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- 2. ABOUT SECTION -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-label">Who I Am</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title">Engineering intelligent systems,<br/>grounded in <span class="gradient-text">data & purpose.</span></h2>
+          <p class="about-para">
+            I'm <strong>Sneha Sarraf</strong> — an Aspiring Software Engineer and Machine Learning researcher currently pursuing a <strong>B.Tech in Computer Science and Engineering</strong> at <strong>SRM Institute of Science and Technology</strong> (Chennai, India).
+          </p>
+          <p class="about-para">
+            My work focuses on bridging the gap between cutting-edge artificial intelligence and high-impact software engineering. From engineering deep learning models using <strong>GANs, CNNs, and PyTorch</strong> with <strong>95%+ accuracy</strong> to detect crop stress and agricultural weeds, to developing and testing production-ready web applications during my internship at <strong>HumaxMindz Enricherz Pvt. Ltd.</strong>, I am passionate about crafting reliable, scalable, and human-centric software.
+          </p>
+          <p class="about-para">
+            Beyond the screen, I believe in technology that serves communities — whether leading student initiatives through the <strong>Computer Society of India (CSI)</strong> or contributing over <strong>130+ volunteer hours</strong> toward air quality improvement in Project Birgunj Swacha Hawa.
+          </p>
+          <div class="about-tags">
+            <span class="tag">🏛️ SRM Institute of Science & Technology</span>
+            <span class="tag">🧠 Machine Learning & Deep Learning</span>
+            <span class="tag">🌾 Agricultural Computer Vision</span>
+            <span class="tag">💻 Full-Stack Development</span>
+            <span class="tag">📊 Power BI & SQL Analytics</span>
+            <span class="tag">🌍 Birgunj Swacha Hawa</span>
+          </div>
+        </div>
+
+        <div class="about-visual">
+          <div class="about-card-stack">
+            <div class="info-card card-srm">
+              <div class="card-icon">🏛️</div>
+              <div class="card-content">
+                <div class="card-title">B.Tech in Computer Science & Engineering</div>
+                <div class="card-sub">SRM Institute of Science and Technology, Chennai · 2023 – Present</div>
+              </div>
+            </div>
+            <div class="info-card card-intern">
+              <div class="card-icon">💼</div>
+              <div class="card-content">
+                <div class="card-title">Software Development Intern</div>
+                <div class="card-sub">HumaxMindz Enricherz Pvt. Ltd. · Jul 2025 – Jan 2026</div>
+              </div>
+            </div>
+            <div class="info-card card-ai">
+              <div class="card-icon">🧠</div>
+              <div class="card-content">
+                <div class="card-title">Agricultural Deep Learning Researcher</div>
+                <div class="card-sub">Water Stress Assessment & Weed Detection · 95%+ Accuracy</div>
+              </div>
+            </div>
+            <div class="info-card card-vol">
+              <div class="card-icon">🌱</div>
+              <div class="card-content">
+                <div class="card-title">Environmental Volunteer (130+ Hours)</div>
+                <div class="card-sub">Project Birgunj Swacha Hawa · Air Quality & Community Action</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. JOURNEY / TIMELINE SECTION -->
+  <section class="journey" id="journey">
+    <div class="container">
+      <div class="section-label">The Story</div>
+      <h2 class="section-title center">Four Chapters of <span class="gradient-text">Continuous Growth</span></h2>
+      <p class="section-subtitle center">From rigorous academic foundations in Nepal to cutting-edge AI research and industrial engineering in Chennai</p>
+
+      <div class="timeline">
+        <!-- Chapter 1 -->
+        <div class="timeline-item" id="chapter-1">
+          <div class="timeline-marker">
+            <div class="marker-ring"></div>
+            <div class="marker-dot">🇳🇵</div>
+          </div>
+          <div class="timeline-card">
+            <div class="chapter-badge">Chapter 1</div>
+            <div class="timeline-period">2021 – 2023</div>
+            <h3 class="timeline-title">The Academic Foundation</h3>
+            <p class="timeline-desc">
+              Completed High School at <strong>Kathmandu Model Higher Secondary School</strong> in Kathmandu, Nepal, graduating with <strong>+2 Science distinction (81.75%)</strong>.
+            </p>
+            <p class="timeline-desc">
+              Fostered a deep fascination for mathematical modeling, analytical problem-solving, and computational sciences, building the rigorous discipline that underpins my engineering journey.
+            </p>
+            <div class="timeline-tags">
+              <span class="t-tag">🇳🇵 Kathmandu, Nepal</span>
+              <span class="t-tag">🔬 +2 Science (81.75%)</span>
+              <span class="t-tag">📐 Mathematics & Physics</span>
+              <span class="t-tag">💡 Algorithmic Thinking</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chapter 2 -->
+        <div class="timeline-item right" id="chapter-2">
+          <div class="timeline-marker">
+            <div class="marker-ring"></div>
+            <div class="marker-dot">🏛️</div>
+          </div>
+          <div class="timeline-card">
+            <div class="chapter-badge">Chapter 2</div>
+            <div class="timeline-period">2023 – Present</div>
+            <h3 class="timeline-title">The Engineering Gateway</h3>
+            <p class="timeline-desc">
+              Enrolled in the <strong>B.Tech in Computer Science and Engineering</strong> program at <strong>SRM Institute of Science and Technology</strong> in Chennai, India.
+            </p>
+            <p class="timeline-desc">
+              Mastered foundational computer science principles: Data Structures & Algorithms, Object-Oriented Programming (C++/Python), Database Management Systems, and Web Technologies. Actively engaged as a member of the <strong>Computer Society of India (CSI)</strong> and the <strong>Aarush SRM Tech Fest</strong> team.
+            </p>
+            <div class="timeline-tags">
+              <span class="t-tag">🏛️ SRM Institute of Science and Technology</span>
+              <span class="t-tag">💻 B.Tech CSE</span>
+              <span class="t-tag">⚡ Computer Society of India</span>
+              <span class="t-tag">🎪 Aarush Tech Fest</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chapter 3 -->
+        <div class="timeline-item" id="chapter-3">
+          <div class="timeline-marker">
+            <div class="marker-ring"></div>
+            <div class="marker-dot">💼</div>
+          </div>
+          <div class="timeline-card">
+            <div class="chapter-badge">Chapter 3</div>
+            <div class="timeline-period">Jul 2025 – Jan 2026</div>
+            <h3 class="timeline-title">Industrial Software Engineering</h3>
+            <p class="timeline-desc">
+              Served as a <strong>Software Development Intern</strong> at <strong>HumaxMindz Enricherz Pvt. Ltd.</strong> in Chennai, India.
+            </p>
+            <div class="highlight-grid">
+              <div class="highlight-item">
+                <span class="hi-icon">🚀</span>
+                <div>
+                  <strong>Scalable Application Development</strong>
+                  <small>Collaborated with cross-functional engineering teams to develop and test core features.</small>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="hi-icon">⚡</span>
+                <div>
+                  <strong>Agile Software Development Lifecycle (SDLC)</strong>
+                  <small>Practiced sprint cycles, daily standups, code reviews, and automated verification.</small>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="hi-icon">🔧</span>
+                <div>
+                  <strong>Debugging & Production Readiness</strong>
+                  <small>Enhanced core problem-solving and software resilience through real-world deployments.</small>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-tags">
+              <span class="t-tag">💼 HumaxMindz Enricherz</span>
+              <span class="t-tag">⚡ Agile / Scrum</span>
+              <span class="t-tag">🧪 Testing & QA</span>
+              <span class="t-tag">🌐 Production Engineering</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chapter 4 -->
+        <div class="timeline-item right" id="chapter-4">
+          <div class="timeline-marker">
+            <div class="marker-ring active"></div>
+            <div class="marker-dot pulse">🌾</div>
+          </div>
+          <div class="timeline-card active-card">
+            <div class="chapter-badge active-badge">Chapter 4 · Current Focus</div>
+            <div class="timeline-period">2025 – Present</div>
+            <h3 class="timeline-title">Agricultural Deep Learning & Innovation</h3>
+            <p class="timeline-desc">
+              Pioneering computer vision and deep learning architectures to revolutionize precision agriculture. Architecting the lead project <strong>Detection and Severity Assessment of Water Stress in Agricultural Crops</strong> (Aug 2026 – Present) and advancing <strong>Weed Detection using GAN & CNN</strong> models achieving 95%+ classification accuracy.
+            </p>
+            <p class="timeline-desc">
+              Combining multi-spectral imagery, PyTorch pipelines, and OpenCV feature extraction to provide automated diagnostics and precision decision support for sustainable agriculture.
+            </p>
+            <div class="timeline-tags">
+              <span class="t-tag live">🌾 Water Stress Detection</span>
+              <span class="t-tag">🌿 Weed Detection GAN/CNN</span>
+              <span class="t-tag">🧠 PyTorch & OpenCV</span>
+              <span class="t-tag">🛰️ Multi-Spectral Imaging</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. FEATURED PROJECTS SECTION -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-label">Portfolio</div>
+      <h2 class="section-title center">Featured Research & <span class="gradient-text">Engineering Projects</span></h2>
+      <p class="section-subtitle center">Applied machine learning models, computer vision systems, and responsive web applications built with modern engineering standards</p>
+
+      <div class="projects-grid">
+        
+        <!-- Project 1: Water Stress Detection -->
+        <div class="project-card">
+          <div class="proj-header">
+            <div class="proj-icon">🌾</div>
+            <span class="proj-status live-badge">● Ongoing Research</span>
+          </div>
+          <h3 class="proj-title">Detection and Severity Assessment of Water Stress in Agricultural Crops</h3>
+          <p class="proj-desc">
+            Architected deep learning computer vision models to detect early-stage crop water stress and classify severity levels across multi-spectral datasets. Implemented image preprocessing and feature extraction with OpenCV and Python to compute vegetative water indices with 94%+ diagnostic accuracy for precision irrigation management.
+          </p>
+          <div class="proj-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">PyTorch</span>
+            <span class="stack-tag">OpenCV</span>
+            <span class="stack-tag">Multi-Spectral Imaging</span>
+            <span class="stack-tag">Deep Learning</span>
+          </div>
+          <div class="proj-links">
+            <span class="proj-link-primary"><i class="fa-solid fa-microscope"></i> Aug 2026 – Present</span>
+            <a href="#about" class="proj-link">Research Overview &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Project 2: Weed Detection Using GAN & CNN -->
+        <div class="project-card">
+          <div class="proj-header">
+            <div class="proj-icon">🌿</div>
+            <span class="proj-status completed-badge">✓ Completed</span>
+          </div>
+          <h3 class="proj-title">Weed Detection Using GAN and CNN</h3>
+          <p class="proj-desc">
+            Built an end-to-end deep learning framework utilizing Generative Adversarial Networks (GAN) for synthetic data augmentation and Convolutional Neural Networks (CNN) for high-accuracy weed classification. Achieved 95%+ classification accuracy on limited agricultural datasets to power automated weed identification in precision farming.
+          </p>
+          <div class="proj-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">TensorFlow</span>
+            <span class="stack-tag">PyTorch</span>
+            <span class="stack-tag">OpenCV</span>
+            <span class="stack-tag">GANs</span>
+            <span class="stack-tag">CNNs</span>
+          </div>
+          <div class="proj-links">
+            <span class="proj-link-primary"><i class="fa-solid fa-check"></i> 95%+ Accuracy</span>
+            <a href="https://github.com/snehasarraf6" target="_blank" rel="noopener" class="proj-link"><i class="fa-brands fa-github"></i> View on GitHub &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Project 3: Responsive Portfolio Website -->
+        <div class="project-card">
+          <div class="proj-header">
+            <div class="proj-icon">🌐</div>
+            <span class="proj-status live-badge">● Live Application</span>
+          </div>
+          <h3 class="proj-title">Responsive Portfolio Website</h3>
+          <p class="proj-desc">
+            Designed and engineered a modern, high-performance personal portfolio web application using semantic HTML5, modern CSS3, and JavaScript. Features interactive particle systems, custom cursors, dark/light theme switching, and smooth scroll animations. Deployed via GitHub Pages for maximum accessibility.
+          </p>
+          <div class="proj-stack">
+            <span class="stack-tag">HTML5</span>
+            <span class="stack-tag">CSS3</span>
+            <span class="stack-tag">JavaScript ES6+</span>
+            <span class="stack-tag">GitHub Pages</span>
+            <span class="stack-tag">UI/UX</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://github.com/snehasarraf6" target="_blank" rel="noopener" class="proj-link-primary"><i class="fa-brands fa-github"></i> GitHub Repository</a>
+            <a href="#hero" class="proj-link">Interactive Demo &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Project 4: Amazon Sales Analytics Dashboard -->
+        <div class="project-card">
+          <div class="proj-header">
+            <div class="proj-icon">📊</div>
+            <span class="proj-status completed-badge">✓ BI Analytics</span>
+          </div>
+          <h3 class="proj-title">Amazon Sales Analytics Dashboard</h3>
+          <p class="proj-desc">
+            Designed an interactive Power BI and SQL dashboard to analyze revenue trends, customer purchasing patterns, and product category performance across 10,000+ transaction records. Generated actionable KPI metrics and automated reporting views to support data-driven executive business decisions.
+          </p>
+          <div class="proj-stack">
+            <span class="stack-tag">Power BI</span>
+            <span class="stack-tag">SQL</span>
+            <span class="stack-tag">Data Modeling</span>
+            <span class="stack-tag">DAX</span>
+            <span class="stack-tag">Business Intelligence</span>
+          </div>
+          <div class="proj-links">
+            <span class="proj-link-primary"><i class="fa-solid fa-chart-line"></i> Sep 2024 – Nov 2024</span>
+            <a href="#expertise" class="proj-link">Data Analytics &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. EXPERTISE & SKILLS SECTION -->
+  <section class="expertise" id="expertise">
+    <div class="container">
+      <div class="section-label">Skills & Tech Stack</div>
+      <h2 class="section-title center">Technical Competencies & <span class="gradient-text">Core Tools</span></h2>
+      <p class="section-subtitle center">A balanced skillset spanning machine learning, modern web development, database architecture, and computer science fundamentals</p>
+
+      <div class="expertise-grid">
+        
+        <!-- Category 1: Programming Languages -->
+        <div class="exp-card">
+          <div class="exp-glow"></div>
+          <div class="exp-icon">💻</div>
+          <h3 class="exp-title">Programming Languages</h3>
+          <p class="exp-desc">Core languages utilized for software development, algorithmic problem-solving, and machine learning pipelines.</p>
+          <ul class="exp-list">
+            <li class="exp-item">
+              <div class="exp-item-header"><span>Python (NumPy, PyTorch, OpenCV)</span><strong>92%</strong></div>
+              <div class="level-bar"><div class="level-fill" data-width="92%"></div></div>
+            </li>
+            <li class="exp-item">
+              <div class="exp-item-header"><span>C & C++ (DSA & Object-Oriented)</span><strong>86%</strong></div>
+              <div class="level-bar"><div class="level-fill" data-width="86%"></div></div>
+            </li>
+            <li class="exp-item">
+              <div class="exp-item-header"><span>JavaScript (ES6+, DOM, Fetch)</span><strong>84%</strong></div>
+              <div class="level-bar"><div class="level-fill" data-width="84%"></div></div>
+            </li>
+            <li class="exp-item">
+              <div class="exp-item-header"><span>HTML5 & Modern CSS3</span><strong>90%</strong></div>
+              <div class="level-bar"><div class="level-fill" data-width="90%"></div></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 2: Machine Learning & AI -->
+        <div class="exp-card">
+          <div class="exp-glow"></div>
+          <div class="exp-icon">🧠</div>
+          <h3 class="exp-title">Machine Learning & Computer Vision</h3>
+          <p class="exp-desc">Deep learning frameworks, image processing algorithms, and generative models for precision applications.</p>
+          <ul class="exp-list">
+            <li class="exp-item">
+              <div class="exp-item-header"><span>PyTorch & TensorFlow</span><strong>88%</strong></div>
+              <div class="level-bar"><div class="level-fill" data-width="88%"></div></div>
+            </li>
+            <li class="exp-item">
+              <div class="exp-item-header"><span>Computer Vision & OpenCV</span><strong>86%</strong></div>
+              <div class="level-bar"><div class="level-fill" data-width="86%"></div></div>
+            </li>
+            <li class="exp-item">
+              <div class="exp-item-header"><span>CNNs & GAN Data Augmentation</span><strong>90%</strong></div>
+              <div class="level-bar"><div class="level-fill" data-width="90%"></div></div>
+            </li>
+            <li class="exp-item">
+              <div class="exp-item-header"><span>Scikit-Learn, Pandas & Data Science</span><strong>88%</strong></div>
+              <div class="level-bar"><div class="level-fill" data-width="88%"></div></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 3: Web & Databases -->
+        <div class="exp-card">
+          <div class="exp-glow"></div>
+          <div class="exp-icon">🗄️</div>
+          <h3 class="exp-title">Web & Database Engineering</h3>
+          <p class="exp-desc">Modern frontend interfaces and robust database management systems for scalable architectures.</p>
+          <ul class="exp-list">
+            <li class="exp-item">
+              <div class="exp-item-header"><span>React.js Web Applications</span><strong>82%</strong></div>
+              <div class="level-bar"><div class="level-fill" data-width="82%"></div></div>
+            </li>
+            <li class="exp-item">
+              <div class="exp-item-header"><span>SQL (PostgreSQL, MySQL Relational DBs)</span><strong>88%</strong></div>
+              <div class="level-bar"><div class="level-fill" data-width="88%"></div></div>
+            </li>
+            <li class="exp-item">
+              <div class="exp-item-header"><span>NoSQL Database Concepts</span><strong>80%</strong></div>
+              <div class="level-bar"><div class="level-fill" data-width="80%"></div></div>
+            </li>
+            <li class="exp-item">
+              <div class="exp-item-header"><span>Power BI & Business Intelligence</span><strong>86%</strong></div>
+              <div class="level-bar"><div class="level-fill" data-width="86%"></div></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 4: Tools & Core CS -->
+        <div class="exp-card">
+          <div class="exp-glow"></div>
+          <div class="exp-icon">⚙️</div>
+          <h3 class="exp-title">Developer Tools & Core CS</h3>
+          <p class="exp-desc">Engineering workflows, version control, software development lifecycles, and core computer science fundamentals.</p>
+          <ul class="exp-list">
+            <li class="exp-item">
+              <div class="exp-item-header"><span>Data Structures & Algorithms (DSA)</span><strong>88%</strong></div>
+              <div class="level-bar"><div class="level-fill" data-width="88%"></div></div>
+            </li>
+            <li class="exp-item">
+              <div class="exp-item-header"><span>Git & GitHub Version Control</span><strong>90%</strong></div>
+              <div class="level-bar"><div class="level-fill" data-width="90%"></div></div>
+            </li>
+            <li class="exp-item">
+              <div class="exp-item-header"><span>Object-Oriented Programming (OOP)</span><strong>90%</strong></div>
+              <div class="level-bar"><div class="level-fill" data-width="90%"></div></div>
+            </li>
+            <li class="exp-item">
+              <div class="exp-item-header"><span>Agile Methodologies & Debugging</span><strong>86%</strong></div>
+              <div class="level-bar"><div class="level-fill" data-width="86%"></div></div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CERTIFICATIONS & LEADERSHIP SECTION -->
+  <section class="achievements" id="achievements">
+    <div class="container">
+      <div class="section-label">Certifications & Leadership</div>
+      <h2 class="section-title center">Recognitions, Certifications & <span class="gradient-text">Activities</span></h2>
+      <p class="section-subtitle center">Verified certifications from global platforms alongside community leadership and environmental volunteerism</p>
+
+      <div class="ach-grid">
+        
+        <!-- Cert 1: Google -->
+        <div class="ach-card">
+          <div class="ach-icon-wrap" style="color: #4285f4;"><i class="fa-brands fa-google"></i></div>
+          <div class="ach-content">
+            <h3 class="ach-title">Foundations: Data, Data, Everywhere</h3>
+            <p class="ach-sub">Google Career Certificates (Coursera) covering data analytics lifecycles, data cleansing, and analytical decision-making.</p>
+            <span class="ach-date">Google · Coursera</span>
+          </div>
+        </div>
+
+        <!-- Cert 2: Scaler -->
+        <div class="ach-card">
+          <div class="ach-icon-wrap" style="color: #6366f1;"><i class="fa-solid fa-database"></i></div>
+          <div class="ach-content">
+            <h3 class="ach-title">DBMS Fundamentals</h3>
+            <p class="ach-sub">Comprehensive database management architecture certification from Scaler Academy covering relational schemas, indexing, and ACID compliance.</p>
+            <span class="ach-date">Scaler Academy</span>
+          </div>
+        </div>
+
+        <!-- Cert 3: AI For Techies -->
+        <div class="ach-card">
+          <div class="ach-icon-wrap" style="color: #22d3ee;"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <div class="ach-content">
+            <h3 class="ach-title">SQL Using AI</h3>
+            <p class="ach-sub">Specialized credential from AI For Techies focusing on automated query generation, database optimization, and AI-driven data querying.</p>
+            <span class="ach-date">AI For Techies</span>
+          </div>
+        </div>
+
+        <!-- Activity 1: CSI -->
+        <div class="ach-card">
+          <div class="ach-icon-wrap" style="color: #10b981;"><i class="fa-solid fa-users"></i></div>
+          <div class="ach-content">
+            <h3 class="ach-title">Computer Society of India (CSI)</h3>
+            <p class="ach-sub">Active member of the CSI Chapter at SRM-KTR, engaging in technical workshops, hackathons, and collaborative engineering sessions.</p>
+            <span class="ach-date">SRM-KTR Chapter</span>
+          </div>
+        </div>
+
+        <!-- Activity 2: Aarush Tech Fest -->
+        <div class="ach-card">
+          <div class="ach-icon-wrap" style="color: #f59e0b;"><i class="fa-solid fa-flag"></i></div>
+          <div class="ach-content">
+            <h3 class="ach-title">Aarush SRM Tech Fest</h3>
+            <p class="ach-sub">Event Management Team member coordinating technical challenges, logistics, and participant engagement at SRM's flagship national festival.</p>
+            <span class="ach-date">Event Coordination</span>
+          </div>
+        </div>
+
+        <!-- Activity 3: Environmental Volunteering -->
+        <div class="ach-card">
+          <div class="ach-icon-wrap" style="color: #22c55e;"><i class="fa-solid fa-seedling"></i></div>
+          <div class="ach-content">
+            <h3 class="ach-title">Project Birgunj Swacha Hawa</h3>
+            <p class="ach-sub">Contributed 130+ volunteer hours conducting air quality surveys, raising environmental awareness, and promoting sustainable practices.</p>
+            <span class="ach-date">130+ Volunteer Hours</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. QUOTE SECTION -->
+  <section class="quote-section">
+    <div class="container">
+      <div class="quote-card">
+        <div class="quote-mark">&ldquo;</div>
+        <p class="quote-text">
+          Technology is at its most powerful when applied to <strong>real-world challenges</strong> — bridging machine learning algorithms with the scalable software systems that empower society and sustainable agriculture.
+        </p>
+        <span class="quote-author">Sneha Sarraf · SRM Institute of Science & Technology</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. CONTACT SECTION -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-label">Connect</div>
+      <h2 class="section-title center">Let's Build Something <span class="gradient-text">Exceptional</span></h2>
+      <p class="section-subtitle center">Whether you have an opportunity, research collaboration, or question, feel free to reach out directly</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          
+          <div class="contact-item" title="Click to copy email">
+            <div class="contact-icon">📧</div>
+            <div class="contact-text">
+              <div class="contact-label">Email Address</div>
+              <div class="contact-value"><a href="mailto:snehasarraf6@gmail.com">snehasarraf6@gmail.com</a></div>
+            </div>
+          </div>
+
+          <div class="contact-item" title="Click to copy phone">
+            <div class="contact-icon">📱</div>
+            <div class="contact-text">
+              <div class="contact-label">Phone Number</div>
+              <div class="contact-value">+91 93632 17953</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-text">
+              <div class="contact-label">Location</div>
+              <div class="contact-value">Chennai, India</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">🔗</div>
+            <div class="contact-text">
+              <div class="contact-label">LinkedIn Profile</div>
+              <div class="contact-value"><a href="https://www.linkedin.com/in/sneha-sarraf-4014322b6" target="_blank" rel="noopener">linkedin.com/in/sneha-sarraf-4014322b6</a></div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">🐙</div>
+            <div class="contact-text">
+              <div class="contact-label">GitHub Profile</div>
+              <div class="contact-value"><a href="https://github.com/snehasarraf6" target="_blank" rel="noopener">github.com/snehasarraf6</a></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="form-name">Your Name</label>
+              <input type="text" id="form-name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="form-email">Your Email</label>
+              <input type="email" id="form-email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="form-subject">Subject</label>
+              <input type="text" id="form-subject" placeholder="Opportunity / Project Collaboration" required />
+            </div>
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" rows="5" placeholder="Hello Sneha, I saw your portfolio and would like to discuss..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary full-width" id="form-submit-btn">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-success" id="form-success">
+              ✓ Thank you! Your message has been sent successfully. Sneha will get back to you soon!
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="brand-icon">⬡</span>
+          <span class="brand-text">Sneha Sarraf</span>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#journey">Journey</a>
+          <a href="#projects">Projects</a>
+          <a href="#expertise">Skills</a>
+          <a href="#achievements">Certifications</a>
+          <a href="#contact">Contact</a>
+          <a href="assets/sneha_sarraf_resume.pdf" target="_blank" download="Sneha_Sarraf_Resume.pdf">Resume (PDF)</a>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sneha Sarraf. All rights reserved.</p>
+        <p class="footer-sub">Designed & Built with HTML5, CSS3, & Modern JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
